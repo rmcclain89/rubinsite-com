@@ -51,3 +51,75 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .page [data-name='Article title'] { font-size: 28px !important; }
   .page [data-name^='Wordmark'] p { font-size: 25px !important; }
 }
+.page .contributed-book-row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 24px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+.page .contributed-book-cover-column {
+  flex: 0 0 120px !important;
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+}
+.page .contributed-book-cover {
+  display: block;
+  width: 120px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+}
+.page .contributed-book-copy {
+  display: flex;
+  flex: 1 1 0% !important;
+  flex-direction: column;
+  min-width: 0 !important;
+  align-items: flex-start;
+  font-family: Inter, Arial, sans-serif;
+}
+.page .contributed-book-title {
+  width: 100%;
+  min-width: 0 !important;
+  color: var(--blue) !important;
+  font-size: 24px !important;
+  line-height: 1.2 !important;
+  overflow-wrap: anywhere;
+}
+.page .contributed-book-label {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.page .contributed-book-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  max-width: 100%;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.page .contributed-book-links a {
+  color: var(--green);
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 760px) {
+  .page .contributed-book-row { gap: 16px !important; }
+  .page .contributed-book-cover-column {
+    flex: 0 0 90px !important;
+    width: 90px !important;
+    min-width: 90px !important;
+    max-width: 90px !important;
+  }
+  .page .contributed-book-cover { width: 90px !important; }
+  .page .contributed-book-title { font-size: 20px !important; }
+}
