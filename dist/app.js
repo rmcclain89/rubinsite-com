@@ -1,0 +1,7 @@
+const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#navigation');
+menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close ×':'Menu ☰'});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('open')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu ☰';menu.focus()}});
+document.querySelectorAll('[data-inquiry]').forEach(a=>a.addEventListener('click',()=>{const type=a.dataset.inquiry,select=document.querySelector('select[name="type"]');if(select)select.value=type;else sessionStorage.setItem('inquiryType',type)}));
+const select=document.querySelector('select[name="type"]');if(select&&sessionStorage.getItem('inquiryType')){select.value=sessionStorage.getItem('inquiryType');sessionStorage.removeItem('inquiryType')}
+document.querySelectorAll('#navigation a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu?.setAttribute('aria-expanded','false')}));
+document.querySelectorAll('[data-demo-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const status=form.querySelector('.form-status');status.hidden=false;status.textContent='Preview complete. Your '+form.elements.type.value.toLowerCase()+' inquiry is ready. This is a demonstration; nothing has been sent. On the finished website, your inquiry will be delivered to Rubin.';status.focus()}));

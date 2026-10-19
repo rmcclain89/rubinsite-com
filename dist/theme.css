@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+  color-scheme: dark;
+  --canvas: #303136;
+  --surface: #282b30;
+  --inset: #373c42;
+  --text: #f5f6f3;
+  --muted: #c0c8cc;
+  --blue: #9bc4e5;
+  --green: #a9cbb6;
+  --panel: #24272c;
+  --rule: #58616a;
+}
+body { background: var(--canvas); color: var(--text); }
+::selection { background: var(--blue); color: #18231e; }
+.page h1, .page h2, .page h3 { font-family: Anton, 'Arial Narrow', Impact, sans-serif; font-weight: 400; text-transform: uppercase; line-height: 1.16 !important; letter-spacing: .005em; text-wrap: pretty; }
+.page h1 { font-size: clamp(42px, 5.4vw, 76px) !important; color: var(--text) !important; }
+.page h2 { font-size: clamp(28px, 3.2vw, var(--heading-size, 40px)) !important; color: var(--blue) !important; }
+.page [data-name='Article title'] { --heading-size: 32px; }
+.page [data-name='Conversation invitation'] h2 { color: var(--text) !important; }
+.page [data-name^='Wordmark'] p, .page footer [data-name='Identity'] > p:first-child { font-size: 29px !important; letter-spacing: .02em; }
+.page [data-name='Text link'], .page [data-name='Retailer labels'] a { color: var(--green); }
+.page .primary-action, .form-actions button { background: var(--green) !important; color: #17261f !important; border-color: var(--green) !important; }
+.page .primary-action * { color: #17261f !important; }
+.page .primary-action:hover, .form-actions button:hover { background: #c0ddca !important; filter: none; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline-color: var(--blue); }
+.menu-toggle { color: var(--text); }
+.skip { background: var(--green); color: #17261f; }
+.home-link { display: inline-flex; align-items: center; min-height: 44px; padding: 12px 0; font-size: 15px; color: var(--text); }
+.home-link[aria-current='page'] { border-bottom: 1px solid var(--blue); }
+.site-brand { font-size: 29px !important; }
+@media (min-width: 761px) and (max-width: 1100px) {
+  header #navigation { gap: 18px !important; }
+  header .site-brand { font-size: 26px !important; }
+}
+.inquiry-form { background: var(--surface); color: var(--text); border-color: var(--rule); }
+.inquiry-form label { color: var(--blue); }
+.inquiry-form input, .inquiry-form select, .inquiry-form textarea { background: #22262a; color: var(--text); border-color: #738078; }
+.inquiry-form input::placeholder, .inquiry-form textarea::placeholder { color: #acb7b2; opacity: 1; }
+.demo-note { color: var(--muted); }
+.form-status { background: var(--panel); color: var(--text); }
+.preview-badge { background: #1d2226; color: var(--muted); border: 1px solid var(--rule); }
+.page [data-name='About logo stamp'] { margin-top: 8px; }
+.page [data-name='Wax seal · Hero · Dimensional'],
+.page [data-name='About logo stamp'] { box-shadow: none !important; }
+@media (max-width: 760px) {
+  header #navigation { background: var(--surface); border-color: var(--rule); }
+  .page h1 { font-size: clamp(38px, 9vw, 56px) !important; }
+  .page h2 { font-size: clamp(27px, 6.8vw, 36px) !important; }
+  .page [data-name='Article title'] { font-size: 28px !important; }
+  .page [data-name^='Wordmark'] p { font-size: 25px !important; }
+}
