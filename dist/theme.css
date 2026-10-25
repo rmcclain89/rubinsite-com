@@ -40,10 +40,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .inquiry-form input::placeholder, .inquiry-form textarea::placeholder { color: #acb7b2; opacity: 1; }
 .demo-note { color: var(--muted); }
 .form-status { background: var(--panel); color: var(--text); }
-.preview-badge { background: #1d2226; color: var(--muted); border: 1px solid var(--rule); }
-.page [data-name='About logo stamp'] { margin-top: 8px; }
-.page [data-name='Wax seal · Hero · Dimensional'],
-.page [data-name='About logo stamp'] { box-shadow: none !important; }
 @media (max-width: 760px) {
   header #navigation { background: var(--surface); border-color: var(--rule); }
   .page h1 { font-size: clamp(38px, 9vw, 56px) !important; }
