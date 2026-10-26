@@ -38,7 +38,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .inquiry-form label { color: var(--blue); }
 .inquiry-form input, .inquiry-form select, .inquiry-form textarea { background: #22262a; color: var(--text); border-color: #738078; }
 .inquiry-form input::placeholder, .inquiry-form textarea::placeholder { color: #acb7b2; opacity: 1; }
-.demo-note { color: var(--muted); }
 .form-status { background: var(--panel); color: var(--text); }
 @media (max-width: 760px) {
   header #navigation { background: var(--surface); border-color: var(--rule); }
